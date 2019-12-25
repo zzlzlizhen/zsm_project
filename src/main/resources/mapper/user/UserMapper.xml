@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zsm.personplay.user.Dao.UserDaoMapper">
+    <sql id="colums">
+       user_id AS userId,
+       username AS username,
+       pwd AS pwd,
+       token AS token
+    </sql>
+    <select id="login" resultType="java.lang.String">
+        SELECT token FROM tab_user WHERE 1=1
+        <if test="username != null and username != ''">
+            and username = #{username}
+        </if>
+        <if test="pwd != null and pwd !=''">
+            and pwd = #{pwd}
+        </if>
+    </select>
+</mapper>

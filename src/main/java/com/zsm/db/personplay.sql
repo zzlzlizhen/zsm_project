@@ -1,0 +1,11 @@
+DROP DATABASE IF EXISTS person_play;
+CREATE DATABASE person_play DEFAULT CHARSET utf8 COLLATE utf8_general_ci;
+
+USE person_play;
+
+DROP TABLE IF EXISTS tab_user;
+CREATE TABLE tab_user(
+id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+username VARCHAR(25),
+pwd VARCHAR(25)
+);
