@@ -1,5 +1,6 @@
 package com.zsm.personplay.user.Dao;
 
+import com.zsm.personplay.user.entity.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -8,5 +9,5 @@ import org.apache.ibatis.annotations.Param;
  */
 @Mapper
 public interface UserDaoMapper {
-    String login(@Param("username")String username, @Param("pwd")String pwd);
+    UserEntity login(@Param("username")String username, @Param("pwd")String pwd);
 }

@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * created by zsm on 2019/12/25
  */
-class UserEntity  implements Serializable {
+public class UserEntity  implements Serializable {
     private Long userId;
     private String username;
     private String pwd;

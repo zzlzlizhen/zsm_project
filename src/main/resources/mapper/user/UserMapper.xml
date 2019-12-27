@@ -7,8 +7,8 @@
        pwd AS pwd,
        token AS token
     </sql>
-    <select id="login" resultType="java.lang.String">
-        SELECT token FROM tab_user WHERE 1=1
+    <select id="login" resultType="com.zsm.personplay.user.entity.UserEntity">
+        SELECT <include refid="colums"/> FROM tab_user WHERE 1=1
         <if test="username != null and username != ''">
             and username = #{username}
         </if>

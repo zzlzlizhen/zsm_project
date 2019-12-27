@@ -1,5 +1,7 @@
 package com.zsm.personplay.user.service;
 
+import com.zsm.personplay.user.entity.UserEntity;
+
 public interface UserService {
-     public String login(String username, String pwd);
+     UserEntity login(UserEntity userEntity);
 }
