@@ -18,7 +18,7 @@ public class JsonUtil {
         jsonUtil.json();
     }
     public void jsonArr(){
-        String city = readFile("G:\\zsm_project\\city.json");
+        String city = readFile("city.json");
         List<CityEntity> cityEntityList = JSON.parseArray(city,CityEntity.class);
         for(int i =0 ; i < cityEntityList.size();i++){
             System.out.println("code:" + cityEntityList.get(i).getCode());
@@ -55,7 +55,7 @@ public class JsonUtil {
         return sbf.toString();
     }
     public void jsonObject(){
-        File file = new File("G:\\zsm_project\\test.json");
+        File file = new File("test.json");
         BufferedReader bufferedReader = null;
         StringBuffer sbf = new StringBuffer();
         String tempStr = "";
@@ -86,7 +86,7 @@ public class JsonUtil {
 
     public void json(){
         //获取到json字符串
-        String jsonStr = readFile2("G:\\zsm_project\\test2.json");
+        String jsonStr = readFile2("test2.json");
         //把json串转换为
         List<Test02> test02List = JSON.parseArray(jsonStr,Test02.class);
         List<TestUser> testUsers = new ArrayList<TestUser>();
