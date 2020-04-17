@@ -1,0 +1,42 @@
+[
+  {
+    "name": "慕容皝",
+    "users": [
+      {
+        "username": "50",
+        "house": { "address": "德茂地铁站"},
+        "password": "123456"
+      },
+      {
+        "username": "50",
+        "house": { "address": "德茂地铁站"},
+        "password": "123456"
+      },
+      {
+        "username": "50",
+        "house": { "address": "德茂地铁站"},
+        "password": "123456"
+      }
+    ]
+  },
+  {
+    "name": "慕容龙城",
+    "users": [
+      {
+        "username": "50",
+        "house": { "address": "德茂地铁站"},
+        "password": "123456"
+      },
+      {
+        "username": "50",
+        "house": { "address": "德茂地铁站"},
+        "password": "123456"
+      },
+      {
+        "username": "50",
+        "house": { "address": "德茂地铁站"},
+        "password": "123456"
+      }
+    ]
+  }
+]
