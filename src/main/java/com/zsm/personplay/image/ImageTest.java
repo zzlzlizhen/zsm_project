@@ -15,13 +15,13 @@ public class ImageTest {
     public static void main(String[] args) throws Exception{
         readAndWrite();
         readComparison();
-        imageCorp("G:\\grenzhenghe\\zsm_project\\good.jpg","G:\\grenzhenghe\\zsm_project\\good1.jpg",200,200,100,100,"jpg","jpg");
+        imageCorp("good.jpg","good1.jpg",200,200,100,100,"jpg","jpg");
     }
     public static void readAndWrite() throws Exception{
-        BufferedImage image = ImageIO.read(new File("G:\\grenzhenghe\\zsm_project\\good.jpg"));
+        BufferedImage image = ImageIO.read(new File("good.jpg"));
         System.out.println("图片宽：" + image.getWidth());
         System.out.println("图片高：" + image.getHeight());
-        ImageIO.write(image,"jpg",new File("G:\\grenzhenghe\\zsm_project\\test.jpg"));
+        ImageIO.write(image,"jpg",new File("test.jpg"));
     }
 
     /**
@@ -31,7 +31,7 @@ public class ImageTest {
     public static void readComparison() throws Exception{
         System.out.println("加速度测试-----");
         Long starTime = System.nanoTime();
-        BufferedImage image = ImageIO.read(new File("G:\\grenzhenghe\\zsm_project\\good.jpg"));
+        BufferedImage image = ImageIO.read(new File("good.jpg"));
         System.out.println("图片宽：" + image.getWidth());
         System.out.println("图片高：" + image.getHeight());
         Long endTime = System.nanoTime();
@@ -42,7 +42,7 @@ public class ImageTest {
         Iterator<ImageReader> readers = ImageIO.getImageReadersByFormatName("jpg");
         ImageReader reader = (ImageReader)readers.next();
         System.out.println(reader.getClass().getName());
-        ImageInputStream lis = ImageIO.createImageInputStream(new File("G:\\grenzhenghe\\zsm_project\\good.jpg"));
+        ImageInputStream lis = ImageIO.createImageInputStream(new File("good.jpg"));
         reader.setInput(lis,true);
         System.out.println("图片宽：" + reader.getWidth(0));
         System.out.println("图片高：" + reader.getHeight(0));
