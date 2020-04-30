@@ -13,6 +13,7 @@ public class TestServerInitializer extends ChannelInitializer{
     protected void initChannel(Channel channel) throws Exception {
         ChannelPipeline pipeline = channel.pipeline();
         pipeline.addLast("httpServerCodec",new HttpServerCodec());
+        //添加自定义handler
         pipeline.addLast("testHttpServerHandler",new TestHttpServerHandler());
     }
 }

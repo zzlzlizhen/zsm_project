@@ -8,6 +8,7 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
  * created by zsm on 2020/4/29
+ * 服务器端
  */
 public class TestServer {
     public static void main(String[] args) {
@@ -16,7 +17,9 @@ public class TestServer {
         EventLoopGroup workGroup = new NioEventLoopGroup();//
 
         try {
+            //便捷简化类方便启动服务
             ServerBootstrap serverBootstrap = new ServerBootstrap();
+            //关联hadler
             serverBootstrap.group(bossGroup,workGroup).channel(NioServerSocketChannel.class).childHandler(new TestServerInitializer());
             ChannelFuture channelFature = serverBootstrap.bind(8899).sync();
             channelFature.channel().closeFuture().sync();
