@@ -15,8 +15,9 @@ public class MyChatServer {
         EventLoopGroup workGroup = new NioEventLoopGroup();
         //
         try {
+            //便捷简化类，来启动服务
             ServerBootstrap serverStrap = new ServerBootstrap();
-            serverStrap.group(bossGroup, workGroup).channel(NioServerSocketChannel.class).childHandler(null);
+            serverStrap.group(bossGroup, workGroup).channel(NioServerSocketChannel.class).childHandler(new MyCharInitalizer());
             ChannelFuture channelFuture = serverStrap.bind(8789).sync();
             channelFuture.channel().closeFuture().sync();
         } catch (InterruptedException e) {
